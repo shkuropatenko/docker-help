@@ -1,0 +1,157 @@
+﻿cd projects/zfortcom2018/
+
+
+.env.dist -> .env
+
+
+
+user
+docker ps - показывает поднятые контейнеры
+docker-compose up -d запускается в папке с проектом, поднимает контейнеры
+docker-compose up -d --build запускается в папке с проектом, поднимает контейнеры с перегенерацией контейнеров (если не работал долго с проектом)
+docker-compose stop запускается в папке с проектом, стопает контейнеры
+docker stop $(docker ps -a -q) - запускается где угодно, стопает все контэйнеры
+
+
+
+docker-compose exec web su www-data - вход в контейнер чтоб выполнять команды 
+
+
+
+git checkout переключиться на мастер - обновится
+git checkout -b название ветки (создать свою ветку) и обновится
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////// matchmaking
+
+composer install  ----- в начале дня можно или если проект не запускается в браузере
+yarn install
+yarn dev
+yarn dev --watch
+
+https://test.matchmaking.loc/search
+https://matchmaking365-photokina.b2bmatch.io/login
+https://test777.b2bmatch.io/login
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+docker-compose start ---------PBG
+docker exec -it pbg-web bash -c "su www-data" ---------PBG
+
+переключиться в другую ветку не локальную
+$ git checkout -b название ветки origin/название ветки
+git pull
+php init   //0 (development, yes, a)
+bin/deploy.sh // 3 (staging)
+
+npm run watch ---------PBG
+
+http://localhost:1001/frontend/web/
+http://pbg.apache71.devplatform1.com/frontend/web/videos
+
+
+***********
+	composer install
+	bash deploy.sh
+	bash up.sh
+	php init
+
+	bash ./bin/deploy.sh	video/img
+***********
+npm run watch
+yarn watch
+
+
+npm run gulp - for Zfort2015
+
+
+vendor/ не влезает - убьет
+
+pwd - отображает текущую директорию
+ls выводит содержимое текущей директории в Linux.
+exit или нажмите Ctrl-D чтобы выйти из командной строки контейнера.
+docker logs - Показывает стандартный вывод контейнера.
+docker top - процессы запущенные в контейнере
+docker network ls 
+
+
+poweroff
+
+
+
+проект, который находится на виртуалке запускать - npm run gulp
+
+
+
+
+
+
+
+
+
+
+
+
+
+PHP STORM ----------------------
+cd C:\Users\<user>\.PhpStorm[version]
+del config/eval/PhpStorm[version].evaluation.key
+del config/options/options.xml
+
+open regedit
+go: HKEY_CURRENT_USER\Software\JavaSoft\Prefs
+go: HKEY_CURRENT_USER\Software\JavaSoft\Prefs\jetbrains\phpstorm (remove all folders)
+
+remove phpstorm key
+
+
+
+
+
+ZFort 2018 
+git pull 
+git merge develop  - стянуть обновления с ветки develop
+
+
+
+
+
+
+git pull
+git merge origin/develop --- смержиться с веткой develop
+
+
+запилил -
+заливаю изменения своей ветки -
+git commit -am "Commit message"
+git pull - проверяю на всяк, чтоб никто не влил в этот момент
+git push
+git merge origin/develop --- смержиться с веткой develop   git merge origin - команда
+если конфликт git commit -am "merge" ( optional )
+
+git checkout develop - переключаюсь на ветку develop
+git pull - обновляюсь
+git merge origin/markup_dev - мержусь
+git push - заливаю
+
+git checkout markup_dev - переключаюсь на свою ветку
+
+
+
+
+
+
+git diff - посмотреть измененный код
+
+
+
+
+
+//////////////////////////////// WEETBIX
+cd смотрим 
+cd projects/generic-campaign-tool
+docker-compose exec web bash
+gulp --projectName weetbix
+http://weetbix.local.engage.today:8005/faq
